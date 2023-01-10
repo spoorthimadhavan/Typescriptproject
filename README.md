@@ -1,1 +1,1 @@
-# Typescriptprooject
+# Typescript project
