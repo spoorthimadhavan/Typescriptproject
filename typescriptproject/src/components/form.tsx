@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Table from 'react-bootstrap/Table';
+import Table from 'react-bootstrap/Table'
 
 interface Product {
   id: number;
@@ -38,9 +38,8 @@ console.log(products)
     };
 
     return (
-        
         <div>
-            <button onClick={handleSort}>Sort by Price</button>
+            <button className="FormButton" onClick={handleSort}>Sort by Price</button>
             <Table striped bordered hover>
                 <thead>
                     <tr>
@@ -58,7 +57,6 @@ console.log(products)
                 <tbody>
                     {products
                         .slice()
-                        .sort((a, b) => (sortAscending ? a.price - b.price : b.price - a.price))
                         .map((product, index) => (
                             <tr key={product.id}>
                                 <td>{product.id}</td>
