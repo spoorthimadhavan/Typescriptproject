@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Table from 'react-bootstrap/Table'
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import Table from "react-bootstrap/Table";
+import axios from "axios";
 
 interface Product {
     id: number;
@@ -16,7 +16,7 @@ interface Product {
     images: string[];
 }
 
-const FormData = () => {
+const ProductsDataForm = () => {
     const [products, setProducts] = useState<Product[]>([]);
     const [sortAscending, setSortAscending] = useState<boolean>(true);
 
@@ -27,7 +27,7 @@ const FormData = () => {
                 /*axios.get method is used to make a GET request to the https://dummyjson.com/products API. 
                 The method returns a promise that is being awaited and the result is being stored into response variable. 
                 The response.data contains the json data that is being set to the component state.*/
-                const response = await axios.get('https://dummyjson.com/products');
+                const response = await axios.get("https://dummyjson.com/products");
                 setProducts(response.data.products);
             } catch (error) {
                 console.log(error); //If an error is thrown, the catch statement allows you to handle the error.
@@ -86,4 +86,4 @@ const FormData = () => {
         </div>
     )
 }
-export default FormData;
+export default ProductsDataForm;

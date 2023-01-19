@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "../App.css";
 
-const CaseConversion = () => {
+const CamelToKebab = () => {
   const [outputStr, setOutputStr] = useState("");
 
   // This function take string as an input and uses regular expression to identify the uppercase in the string
-  function camelToKebab(str: string): string {
+  function camelCaseToKebab(str: string): string {
     /* ([a-z0-9]|(?=[A-Z]))  is a group ($1) Matches either a lowercase letter, a digit, or a positive lookahead for an uppercase letter.
        ([A-Z]): Matches an uppercase letter. This is group $2
        g is it matches until no matches are left (the expression will match all occurrences of the pattern in the input string, not just the first one.)
@@ -21,7 +21,7 @@ const CaseConversion = () => {
           <input
             className="Input-field"
             type="text"
-            onChange={(e) => setOutputStr(camelToKebab(e.target.value))}
+            onChange={(e) => setOutputStr(camelCaseToKebab(e.target.value))}
           />
         </label>
         <br />
@@ -39,4 +39,4 @@ const CaseConversion = () => {
   );
 }
 
-export default CaseConversion;
+export default CamelToKebab;

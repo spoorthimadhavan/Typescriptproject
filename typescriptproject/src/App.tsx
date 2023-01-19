@@ -1,9 +1,9 @@
-import React from 'react';
-import './App.css';
-import FormData from './components/FormData';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import NavBar from './components/NavBar';
-import CaseConversion from './components/CaseConversion';
+import React from "react";
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ProductsDataForm from "./components/ProductsDataForm";
+import NavBar from "./components/NavBar";
+import CamelToKebab from "./components/CamelToKebab";
 
 const App = () => {
   return (
@@ -11,8 +11,8 @@ const App = () => {
       <NavBar />
       <div>
         <Routes>
-          <Route path="/" element={<CaseConversion />} />
-          <Route path="/products" element={<FormData />} />
+          <Route path="/" element={<CamelToKebab />} />
+          <Route path="/products" element={<ProductsDataForm />} />
         </Routes>
       </div>
     </BrowserRouter>
