@@ -16,9 +16,7 @@ interface Product {
     images: string[];
 }
 
-interface Props { }
-
-const FormData: React.FC<Props> = () => {
+const FormData = () => {
     const [products, setProducts] = useState<Product[]>([]);
     const [sortAscending, setSortAscending] = useState<boolean>(true);
 

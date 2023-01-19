@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavBar: React.FC<{}> = () => {
+const NavBar = () => {
     return (
         <header>
             <div>

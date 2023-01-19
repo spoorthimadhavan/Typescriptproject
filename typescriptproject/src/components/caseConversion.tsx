@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../App.css";
-function CaseConversion() {
+
+const CaseConversion = () => {
   const [outputStr, setOutputStr] = useState("");
 
   // This function take string as an input and uses regular expression to identify the uppercase in the string

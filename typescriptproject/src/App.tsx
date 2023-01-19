@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import CaseConversion from './components/CaseConversion';
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <BrowserRouter>
       <NavBar />
